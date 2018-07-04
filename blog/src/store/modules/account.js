@@ -29,7 +29,7 @@ const state = {
     },
     {
       img: 'static/img/weibo.png',
-      url: 'http://weibo.com/1003418012'
+      url: 'https://weibo.com/u/5262430385'
     }
     // ,
     // {
