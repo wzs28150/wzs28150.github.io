@@ -71,8 +71,9 @@
   }
   @media screen and (max-width: 800px) {
     .title-container {
-      padding: 0px 15px;
-      .back{ margin: 0; }
+      padding: 0px 15px; position: relative;
+      .back{ margin: 0; position: absolute; right: 15px;}
+      ul{display: none;}
     }
     .comment-container{
       padding: 0px 15px;

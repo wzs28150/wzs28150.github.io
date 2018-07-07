@@ -32,7 +32,7 @@
           z-index: 1;
           background-color: #fff; margin-top: 50px;
       }
-      .left-container {position: fixed; z-index: 3;background-color: #fff;transition: 1s all!important;
+      .left-container {position: fixed; z-index: 3;background-color: #fff;transition: 1s all!important; width: 200px;
         &.left-hidden{transition: 1s all!important;
           position: fixed; background-color: #fff; z-index:2; transform: translateX(-200px);
         }

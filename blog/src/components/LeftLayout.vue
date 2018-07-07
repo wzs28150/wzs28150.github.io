@@ -53,7 +53,7 @@
       border-radius: 35px;
       cursor: pointer;
       position: fixed;
-      top:50px;left: 44px;
+      top:50px;left: 65px;
       transition: 1s all!important;
       &:hover {
         transform: rotate(360deg);
