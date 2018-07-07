@@ -1,23 +1,26 @@
 <template>
-  <div class="blog-container">
-    <labels-list/>
-    <router-view/>
-  </div>
+<div class="blog-container">
+  <labels-list/>
+  <router-view/>
+</div>
 </template>
 <style lang="scss" scoped>
-  .blog-container {
+.blog-container {
     width: calc(100% - 200px); // 兼容 IE 10
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-  }
+}
+@media screen and (max-width: 800px) {
+
+}
 </style>
 <script>
-  import LabelsList from '../components/LabelsList.vue'
+import LabelsList from '../components/LabelsList.vue'
 
-  export default {
-    components: {
-      LabelsList
-    }
+export default {
+  components: {
+    LabelsList
   }
+}
 </script>

@@ -13,8 +13,8 @@
         </li>
       </ul>
       <ul class="left-menu">
-        <router-link :class="isBlog ? 'selected-menu':''" tag="li" :to="{name: 'BlogList'}">个人博客</router-link>
-        <router-link :class="isAboutMe ? 'selected-menu':''" tag="li" :to="{name: 'AboutMe'}">关于我</router-link>
+        <router-link :class="isBlog ? 'selected-menu':''" tag="li" :to="{name: 'BlogList'}" @click.native="home">个人博客</router-link>
+        <router-link :class="isAboutMe ? 'selected-menu':''" tag="li" :to="{name: 'AboutMe'}" @click.native="home">关于我</router-link>
       </ul>
       <div v-if="showQQGroup" class="qq-group">
         <span>BGA 系列</span>
@@ -52,6 +52,7 @@
       flex: 0 0 70px;
       border-radius: 35px;
       cursor: pointer;
+      top:0;transition: 1s all!important;
       &:hover {
         transform: rotate(360deg);
         transition: 1s all ease-in;
@@ -182,11 +183,24 @@
       cursor: pointer;
     }
   }
+
+  @media screen and (max-width: 800px) {
+    .left-hidden{
+      .user-info {
+        img{ position: fixed; z-index: 5; top: 7px; transform: translateX(200px); width: 36px; left: 15px;transition: 1s all!important;}
+      }
+    }
+  }
 </style>
 <script>
   import { mapGetters } from 'vuex'
 
   export default {
+    data () {
+      return {
+        leftshow: true
+      }
+    },
     computed: {
       ...mapGetters([
         'copyright',
@@ -204,7 +218,12 @@
     },
     methods: {
       home () {
-        this.$router.push('/')
+        if (this.leftshow) {
+          this.leftshow = false
+        } else {
+          this.leftshow = true
+        }
+        this.$emit('leftshow', this.leftshow)
       },
       openThirdPartySite (url) {
         window.open(url)

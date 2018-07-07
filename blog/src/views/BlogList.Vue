@@ -138,6 +138,41 @@
       color: #849aa4;
     }
   }
+
+  @media screen and (max-width: 800px) {
+    .table-header {
+      padding: 0px 15px;
+      :last-child {
+        display: none;
+      }
+    }
+
+    .issue-list {
+
+      .issue-item {
+        padding: 0px 15px;
+        position: relative;
+        a{ display: block; width: 100%; height: 69px; line-height: 69px;}
+        ul {
+          position: absolute;
+          right: 15px;
+          height: 24px;
+          margin: 0;
+          .tag-small{
+            margin: 0;
+          }
+        }
+        .time {
+          font-size: 15px;
+          display: none;
+        }
+      }
+    }
+
+    .bottom-bar {
+      display: none;
+    }
+  }
 </style>
 <script>
   import { mapGetters, mapActions } from 'vuex'

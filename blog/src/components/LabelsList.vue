@@ -28,6 +28,16 @@
     background-color: #f2f5f8;
     color: #849aa4;
   }
+
+  @media screen and (max-width: 800px) {
+    .label-list {
+      padding: 15px 15px 5px 15px;
+      li {
+        margin-bottom: 10px;
+        margin-right: 0;
+      }
+    }
+  }
 </style>
 <script>
   import { mapGetters, mapActions } from 'vuex'
