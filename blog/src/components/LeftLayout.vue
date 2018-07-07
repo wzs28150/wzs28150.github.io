@@ -42,7 +42,7 @@
 
   .user-info {
     flex: 0 0 150px;
-    margin-top: 50px;
+    margin-top: 120px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -52,7 +52,9 @@
       flex: 0 0 70px;
       border-radius: 35px;
       cursor: pointer;
-      top:0;transition: 1s all!important;
+      position: fixed;
+      top:50px;left: 44px;
+      transition: 1s all!important;
       &:hover {
         transform: rotate(360deg);
         transition: 1s all ease-in;
