@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <top-layout class="top-container"/>
-    <left-layout :class="['left-container',{'left-hidden': isshow}]"  v-on:leftshow="leftshow"/>
+    <left-layout :class="['left-container',{'left-hidden': isshow}]"  v-on:leftshow="leftshow" />
     <router-view class="main-container"/>
     <bga-back-top :svgMajorColor="'#7b79e5'" :bottom="90" :right="5" :svgMinorColor="'#ba6fda'"
                   :svgType="'rocket_smoke'"/>
@@ -47,7 +47,8 @@
   export default {
     data () {
       return {
-        isshow: true
+        isshow: true,
+        lableshow: false
       }
     },
     components: {

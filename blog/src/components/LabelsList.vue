@@ -36,6 +36,7 @@
         margin-bottom: 10px;
         margin-right: 0;
       }
+      &.label-hidden{ display: none; }
     }
   }
 </style>
@@ -43,6 +44,11 @@
   import { mapGetters, mapActions } from 'vuex'
 
   export default {
+    data () {
+      return {
+        isshow: false
+      }
+    },
     computed: {
       ...mapGetters([
         'labels',

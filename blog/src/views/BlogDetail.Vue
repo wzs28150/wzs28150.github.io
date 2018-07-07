@@ -69,6 +69,15 @@
     overflow-y: auto;
     padding: 0px 50px;
   }
+  @media screen and (max-width: 800px) {
+    .title-container {
+      padding: 0px 15px;
+      .back{ margin: 0; }
+    }
+    .comment-container{
+      padding: 0px 15px;
+    }
+  }
 </style>
 <script>
   import { mapActions } from 'vuex'
