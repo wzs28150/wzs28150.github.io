@@ -17,7 +17,7 @@ const state = {
   },
   gitHubUser: null,  // 这个不要修改，这个不要修改，这个不要修改。
   gitHubUsername: 'wzs28150',  // 修改成你自己的 GitHub 账号
-  copyright: '2018 - 2019',  // 修改成你自己的
+  copyright: '2018 - 2021',  // 修改成你自己的
   recordNumber: null,  // 修改成你自己的备案编号，如果没有备案的话就设置为 null
   repo: 'wzs28150/wzs28150.github.io',  // 记录 Issue 的仓库的全名「用户名/仓库名」
   pageSize: 10,  // 博客列表每页显示多少条博客
@@ -28,14 +28,9 @@ const state = {
       url: 'https://github.com/wzs28150'  // 第三方站点的 url
     },
     {
-      img: 'static/img/weibo.png',
-      url: 'https://weibo.com/u/5262430385'
+      img: 'static/img/gitee.png',
+      url: 'https://gitee.com/harbin_kuchuang_network_wz666s'
     }
-    // ,
-    // {
-    //   img: 'static/img/git.png',
-    //   url: 'https://wzs28150.gitbooks.io/bgalearningnotes-git/content'
-    // }
     // 如果还有其他站点需要显示，继续在这里追加
   ]
 }

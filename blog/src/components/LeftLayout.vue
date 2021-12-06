@@ -14,7 +14,8 @@
       </ul>
       <ul class="left-menu">
         <router-link :class="isBlog ? 'selected-menu':''" tag="li" :to="{name: 'BlogList'}" @click.native="home">个人博客</router-link>
-        <router-link :class="isAboutMe ? 'selected-menu':''" tag="li" :to="{name: 'AboutMe'}" @click.native="home">关于我</router-link>
+        <router-link :class="scroller ? 'selected-menu':''" tag="li" :to="{name: 'BlogList'}" @click.native="openThirdPartySite('https://wzs28150.github.io/coolui-scroller/v3/')">scroller组件</router-link>
+         <router-link :class="isAboutMe ? 'selected-menu':''" tag="li" :to="{name: 'AboutMe'}" @click.native="home">关于我</router-link>
       </ul>
       <div v-if="showQQGroup" class="qq-group">
         <span>BGA 系列</span>
@@ -127,7 +128,7 @@
       }
     }
     :first-child {
-      margin-bottom: 30px;
+      // margin-bottom: 30px;
     }
   }
 
